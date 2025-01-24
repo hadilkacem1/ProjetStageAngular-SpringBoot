@@ -1,0 +1,40 @@
+.btn-circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Add a transition for smooth animation */
+  }
+  
+  .btn-circle:hover {
+    transform: scale(1.1); /* Apply a scale transformation on hover */
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 10px;
+  }
+  .custom-search-input {
+    border-radius: 5px;
+  }
+  
+  .btn-custom-search {
+    border-radius: 5px;
+    background-color:#3e6590; /* Couleur du fond du bouton */
+    border: none;
+    padding: 8px 15px;
+    color: rgb(223, 199, 199); /* Couleur du texte du bouton */
+    transition: background-color 0.2s;
+  }
+  
+  .btn-custom-search:hover {
+    background-color: #3e6590; /* Couleur du fond du bouton au survol */
+  }
+  
+  .custom-search-input {
+    max-width: 249px; /* Ajustez la largeur selon vos besoins */
+  }
+  

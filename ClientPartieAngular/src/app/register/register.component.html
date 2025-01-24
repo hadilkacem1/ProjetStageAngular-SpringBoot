@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from landing.engotheme.com/html/lotus/demo/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Jul 2023 10:58:02 GMT -->
+<head>
+    <meta charset="utf-8">
+    <!-- TITLE -->
+    <title>Register</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="../assets/images/favicon.png"/>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+</head>
+
+<!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+
+    <!-- PRELOADER -->
+  
+    <!-- END / PRELOADER -->
+
+    <!-- PAGE WRAP -->
+    <div id="page-wrap">
+
+        <!-- HEADER -->
+        <app-header></app-header>
+        <!-- END / HEADER -->
+
+        <!-- ACCOUNT -->
+        <section class="section-account parallax bg-11">
+            <div class="awe-overlay"></div>
+            <div class="container">
+                <div class="login-register">
+                    <div class="text text-center">
+                        <h2>REGISTER FORM</h2>
+                        <p>If you no have account in lotus Hotel! Register and feeling</p>
+                        <form [formGroup]="ClientForm" (ngSubmit)="addNewClient()" action="#" class="account_form">
+                            <div class="field-form">
+                                <input formControlName="nom" type="text" class="field-text" placeholder="User name*">
+                                <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="alert alert-danger">
+                                    <div *ngIf="nom.errors && nom.errors['required']">
+                                        Le nom est requis.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="field-form">
+                                <input formControlName="prenom" type="text" class="field-text" placeholder="Prenom*">
+                                <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="alert alert-danger">
+                                    <div *ngIf="prenom.errors && prenom.errors['required']">
+                                        Le prénom est requis.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="field-form">
+                                <input formControlName="email" type="email" class="field-text" placeholder="Email*">
+                                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                                    <div *ngIf="email.errors && email.errors['required']">
+                                        L'adresse email est requise.
+                                    </div>
+                                    <div *ngIf="email.errors && email.errors['email']">
+                                        L'adresse email doit être au format correct.
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="field-form">
+                                <input formControlName="mdp" type="password" class="field-text" placeholder="Password*">
+                                <div *ngIf="mdp.invalid && (mdp.dirty || mdp.touched)" class="alert alert-danger">
+                                    <div *ngIf="mdp.errors && mdp.errors['required']">
+                                        Le mot de passe est requis.
+                                    </div>
+                                    <div *ngIf="mdp.errors && mdp.errors['minlength']">
+                                        Le mot de passe doit contenir au moins 8 caractères.
+                                    </div>
+                                </div>
+                                <span class="view-pass"><i class="lotus-icon-view"></i></span>
+                            </div>
+                        
+                            <div class="field-form">
+                                <input formControlName="tel" type="number" class="field-text" placeholder="Téléphone">
+                                <div *ngIf="tel.invalid && (tel.dirty || tel.touched)" class="alert alert-danger">
+                                    <div *ngIf="tel.errors && tel.errors['required']">
+                                        Le numéro de téléphone est requis.
+                                    </div>
+                                    <div *ngIf="tel.errors && tel.errors['pattern']">
+                                        Le numéro de téléphone doit contenir uniquement des chiffres.
+                                    </div>
+                                </div>
+                                <span class="view-pass"><i class="lotus-icon-view"></i></span>
+                            </div>
+                        
+                            <div class="field-form">
+                                <input formControlName="adresse" type="text" class="field-text" placeholder="Adresse">
+                                <div *ngIf="adresse.invalid && (adresse.dirty || adresse.touched)" class="alert alert-danger">
+                                    <div *ngIf="adresse.errors && adresse.errors['required']">
+                                        L'adresse est requise.
+                                    </div>
+                                </div>
+                                <span class="view-pass"><i class="lotus-icon-view"></i></span>
+                            </div>
+                        
+                            <div class="field-form field-submit">
+                                <button class="awe-btn awe-btn-13" [disabled]="ClientForm.invalid">REGISTER</button>
+                            </div>
+                        </form>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END / ACCOUNT -->
+
+        <!-- FOOTER -->
+        <app-footer></app-footer>
+        <!-- END / FOOTER -->
+
+    </div>
+    <!-- END / PAGE WRAP -->
+
+
+ 
+</body>
+
+<!-- Mirrored from landing.engotheme.com/html/lotus/demo/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Jul 2023 10:58:02 GMT -->
+</html>

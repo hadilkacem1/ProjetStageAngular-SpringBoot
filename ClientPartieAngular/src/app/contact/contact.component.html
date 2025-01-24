@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from landing.engotheme.com/html/lotus/demo/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Jul 2023 11:00:09 GMT -->
+<head>
+    <meta charset="utf-8">
+    <!-- TITLE -->
+    <title>Contact</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="../assets/images/favicon.png"/>
+
+    
+
+   
+</head>
+
+<!--[if IE 7]> <body class="ie7 lt-ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 8]> <body class="ie8 lt-ie9 lt-ie10"> <![endif]-->
+<!--[if IE 9]> <body class="ie9 lt-ie10"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
+
+
+<!-- PAGE WRAP -->
+<div id="page-wrap">
+
+    <!-- HEADER -->
+ <app-header></app-header>
+    <!-- END / HEADER -->
+
+    <!-- SUB BANNER -->
+    <section class="section-sub-banner bg-9">
+        <div class="sub-banner">
+            <div class="container">
+                <div class="text text-center">
+                    <h2>CONTACTEZ NOUS</h2>
+                    <p>Soyer les bienvenue</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- END / SUB BANNER -->
+
+    <!-- CONTACT -->
+    <section class="section-contact">
+        <div class="container">
+            <div class="contact">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-5">
+
+                        <div class="text">
+                            <h2>Contact</h2>
+                            <p>Nous sommes impatients de vous accueillir à notre maison d'hôtes et de vous offrir une expérience inoubliable. Si vous avez des questions, des demandes spéciales ou si vous souhaitez réserver votre séjour, n'hésitez pas à nous contacter. Notre équipe attentionnée est là pour vous aider et rendre votre séjour aussi agréable que possible. Que ce soit pour discuter des détails de votre réservation ou pour obtenir des recommandations sur les activités locales, nous sommes là pour vous offrir un service personnalisé et chaleureux. Votre aventure paisible et revitalisante nous tient à cœur, alors n'hésitez pas à nous joindre.</p>
+                            <ul>
+                                <li><i class="icon lotus-icon-location"></i> 225 Beach Street, Tunis</li>
+                                <li><i class="icon lotus-icon-phone"></i> +216 5456554</li>
+                                <li><i class="icon fa fa-envelope-o"></i> <a href="https://landing.engotheme.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="335f5c4746405b5c47565f73545e525a5f1d505c5e">[email&#160;Guesthouse@gmail.com]</a></li>
+                            </ul>
+                        </div>
+
+                    
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-lg-offset-1">
+                        <div class="contact-form">
+                          <form [formGroup]="ContactForm" (ngSubmit)="addNewContact()">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <input formControlName="nom" type="text" class="field-text" placeholder="Nom">
+                                <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="error-message">
+                                  <span *ngIf="nom.errors?.['required']">Name is required.</span>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <input formControlName="email" type="text" class="field-text" placeholder="Email">
+                                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+                                  <span *ngIf="email.errors?.['required']">Email is required.</span>
+                                  <span *ngIf="email.errors?.['email']">Entrer une adresse email valide.</span>
+                                </div>
+                              </div>
+                              <div class="col-sm-12">
+                                <input formControlName="sujet" type="text" class="field-text" placeholder="Sujet">
+                              </div>
+                              <div class="col-sm-12">
+                                <textarea formControlName="msg" cols="30" rows="10" class="field-textarea" placeholder="Ecris ici ...."></textarea>
+                                <div *ngIf="msg.invalid && (msg.dirty || msg.touched)" class="error-message">
+                                  <span *ngIf="msg.errors?.['required']">Message is required.</span>
+                                </div>
+                              </div>
+                              <div class="col-sm-6">
+                                <button type="submit" class="awe-btn awe-btn-13">Envoye</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END / CONTACT -->
+
+    <!-- MAP -->
+    
+    <!-- END / MAP -->
+
+    <!-- FOOTER -->
+   <app-footer></app-footer>
+    <!-- END / FOOTER -->
+
+</div>
+<!-- END / PAGE WRAP -->
+
+
+
+</body>
+
+<!-- Mirrored from landing.engotheme.com/html/lotus/demo/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Jul 2023 11:00:10 GMT -->
+</html>

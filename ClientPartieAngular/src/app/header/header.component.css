@@ -1,0 +1,4 @@
+.reduced-image {
+    max-width: 200px; /* Ajustez cette valeur selon vos besoins */
+    height: auto;
+}

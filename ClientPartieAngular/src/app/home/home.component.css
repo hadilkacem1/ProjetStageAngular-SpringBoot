@@ -1,0 +1,36 @@
+.slider-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding-right: 400px;
+}
+
+.overlay-text {
+    color: #ffffff;
+    font-size: 35px;
+    font-family: 'Cursive', sans-serif; 
+    margin-bottom: 10px;
+    display: block;
+}
+
+.reservation-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.reservation-button:hover {
+    background-color: #0056b3;
+}
